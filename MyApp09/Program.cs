@@ -15,14 +15,15 @@ namespace MyApp09
         public static void Main(string[] args)
         {
             var host = new WebHostBuilder()
-                    .UseKestrel()
-                    .UseUrls("http://localhost:8081/")
-                    .UseContentRoot(Directory.GetCurrentDirectory())
-                    .UseIISIntegration()
-                    .UseStartup<Startup>()
-                    .Build();
+                .UseKestrel()
+                .UseUrls("http://localhost:8081/")
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseIISIntegration()
+                .UseStartup<Startup>()
+                .Build();
 
             host.Run();
         }
+
     }
 }
